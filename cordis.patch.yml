@@ -1,0 +1,3 @@
+- insert:
+    - id: trajectory-diff
+      name: 'dsh-trajectory-diff'

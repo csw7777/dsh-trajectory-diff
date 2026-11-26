@@ -1,0 +1,13 @@
+overrides:
+  '@deepseek-ai/cordis': link:../worktrees/deepseek-harness/vendor/cordis
+  '@deepseek-ai/cordis-plugin-include': link:../worktrees/deepseek-harness/vendor/include
+  '@deepseek-ai/cordis-plugin-loader': link:../worktrees/deepseek-harness/vendor/loader
+  '@deepseek-ai/dsh-agent': link:../worktrees/deepseek-harness/packages/core/agent
+  '@deepseek-ai/dsh-agent-loop-testkit': link:../worktrees/deepseek-harness/packages/test-support/agent-loop-testkit
+  '@deepseek-ai/dsh-brand': link:../worktrees/deepseek-harness/packages/util/brand
+  '@deepseek-ai/dsh-commands': link:../worktrees/deepseek-harness/packages/interaction/commands
+  '@deepseek-ai/dsh-llm': link:../worktrees/deepseek-harness/packages/llm/llm
+  '@deepseek-ai/dsh-session': link:../worktrees/deepseek-harness/packages/core/session
+  '@deepseek-ai/dsh-session-projection': link:../worktrees/deepseek-harness/packages/session/session-projection
+  '@deepseek-ai/dsh-session-query': link:../worktrees/deepseek-harness/packages/session-query/session-query
+  '@deepseek-ai/schemastery': link:../worktrees/deepseek-harness/vendor/schemastery
