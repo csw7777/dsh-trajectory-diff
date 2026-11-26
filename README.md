@@ -1,5 +1,7 @@
 # Agent Trajectory Diff for DeepSeek Harness
 
+[![CI](https://github.com/csw7777/dsh-trajectory-diff/actions/workflows/ci.yml/badge.svg)](https://github.com/csw7777/dsh-trajectory-diff/actions/workflows/ci.yml)
+
 A read-only DeepSeek Harness plugin that compares two agent runs and reports the **first semantic divergence** with its exact turn, step, tool call, and source event position.
 
 Use it to debug model upgrades, plugin changes, prompt experiments, and production agent regressions without replaying the model or executing tools.
