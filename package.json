@@ -1,0 +1,86 @@
+{
+  "name": "dsh-trajectory-diff",
+  "version": "0.1.0",
+  "description": "Deterministic semantic diff for DeepSeek Harness session trajectories",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csw7777/dsh-trajectory-diff.git"
+  },
+  "homepage": "https://github.com/csw7777/dsh-trajectory-diff#readme",
+  "bugs": {
+    "url": "https://github.com/csw7777/dsh-trajectory-diff/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "agent",
+    "evaluation",
+    "diff"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./diff": {
+      "types": "./lib/types/diff.d.ts",
+      "default": "./lib/diff.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsdown && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.1.0",
+    "@deepseek-ai/dsh-brand": ">=0.0.1-rc.1",
+    "@deepseek-ai/dsh-commands": ">=0.0.1-rc.1",
+    "@deepseek-ai/dsh-session": ">=0.0.1-rc.1",
+    "@deepseek-ai/dsh-session-query": ">=0.0.1-rc.1",
+    "@deepseek-ai/schemastery": ">=0.0.1-rc.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "link:../worktrees/deepseek-harness/vendor/cordis",
+    "@deepseek-ai/cordis-plugin-include": "link:../worktrees/deepseek-harness/vendor/include",
+    "@deepseek-ai/cordis-plugin-loader": "link:../worktrees/deepseek-harness/vendor/loader",
+    "@deepseek-ai/dsh-agent": "link:../worktrees/deepseek-harness/packages/core/agent",
+    "@deepseek-ai/dsh-agent-loop-testkit": "link:../worktrees/deepseek-harness/packages/test-support/agent-loop-testkit",
+    "@deepseek-ai/dsh-brand": "link:../worktrees/deepseek-harness/packages/util/brand",
+    "@deepseek-ai/dsh-commands": "link:../worktrees/deepseek-harness/packages/interaction/commands",
+    "@deepseek-ai/dsh-llm": "link:../worktrees/deepseek-harness/packages/llm/llm",
+    "@deepseek-ai/dsh-session": "link:../worktrees/deepseek-harness/packages/core/session",
+    "@deepseek-ai/dsh-session-projection": "link:../worktrees/deepseek-harness/packages/session/session-projection",
+    "@deepseek-ai/dsh-session-query": "link:../worktrees/deepseek-harness/packages/session-query/session-query",
+    "@deepseek-ai/schemastery": "link:../worktrees/deepseek-harness/vendor/schemastery",
+    "@types/node": "^24.10.1",
+    "@vitest/coverage-v8": "^4.0.16",
+    "tsdown": "^0.20.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}
