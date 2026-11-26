@@ -28,6 +28,10 @@ Agent observability usually stops at "these two runs produced different text." T
 - **Zero model and tool execution** — no API cost, no side effects, no Session mutations from the diff engine.
 - **Framework-neutral core** — `src/diff.ts` accepts typed trajectory documents independently of the DSH command adapter.
 
+## OpenTelemetry mapping (in development)
+
+The W02 span-to-event contract is documented in [the minimal OpenTelemetry mapping](docs/otel-mapping.md). The `dsh-trajectory-diff/otel` entry point is under development: it is not part of v0.1.0 and is not yet connected to `/diff`.
+
 ## Install
 
 The plugin targets the DeepSeek Harness plugin ecosystem and the `dsh-plugin` topic.
