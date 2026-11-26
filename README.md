@@ -106,7 +106,7 @@ Requirements: Node.js 22.18+ and pnpm. Clone this repository, prepare the siblin
 
 ```bash
 node scripts/setup-dsh.mjs
-pnpm install --config.auto-install-peers=false
+pnpm install --frozen-lockfile
 pnpm run typecheck
 pnpm test
 pnpm run build
