@@ -29,7 +29,7 @@ jobs:
         run: node scripts/setup-dsh.mjs
 
       - name: Install plugin dependencies
-        run: pnpm install --frozen-lockfile --config.auto-install-peers=false
+        run: pnpm install --frozen-lockfile
 
       - name: Typecheck
         run: pnpm run typecheck
