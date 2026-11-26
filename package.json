@@ -33,6 +33,10 @@
       "types": "./lib/types/diff.d.ts",
       "default": "./lib/diff.js"
     },
+    "./otel": {
+      "types": "./lib/types/otel.d.ts",
+      "default": "./lib/otel.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [
